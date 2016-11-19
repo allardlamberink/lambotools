@@ -46,3 +46,14 @@ if len(sys.argv) > 1:
 	get_soa_for_domain(sys.argv[1])
 else:
 	print "Not enough arguments\nExample usage:\nupdate_soa.py <domainname>\n"
+
+
+def process_domain_name_list():
+	domain_name_list_file  = './update_soa.txt'
+	domain_name_list = [line.rstrip('\n') for line in open(domain_name_list_file)]
+	for domain_name in domain_name_list:
+		print "processing domain {0}".format(domain_name)
+		try:
+			get_soa_for_domain(domain_name)
+		except:
+			print 'fout lezen domain name list'
