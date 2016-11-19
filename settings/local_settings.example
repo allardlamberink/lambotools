@@ -1,0 +1,4 @@
+sqlhost = "127.0.0.1"
+sqlpwd = "sqlpasswd"
+sqldb = "sqldbname"
+sqluser = "sqluser"
